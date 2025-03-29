@@ -1,0 +1,160 @@
+/* Custom Font Styling */
+/* Custom Font Styling */
+.serif-medium {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+  }
+  
+  .times-italic {
+    font-family: 'Times New Roman', Times, serif !important;
+    font-style: italic !important;
+  }
+  
+  
+  /* Responsive Typography Tweaks */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 32px;
+    }
+  
+    p {
+      font-size: 18px;
+    }
+  
+    button {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    button {
+      font-size: 15px;
+      padding: 0.5rem 1.25rem;
+    }
+  }
+
+
+
+
+
+
+  @keyframes fade-up {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes red-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    }
+    50% {
+      box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+    }
+  }
+  
+  .animated-button {
+    animation: fade-up 2s ease-out forwards, red-pulse 2s ease-out infinite;
+    animation-delay: 2s, 2s; /* first for fade-up, second for red pulse */
+    opacity: 0;
+    border-radius: 40px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  
+  
+  
+  
+
+
+  /* Particle container */
+.particle-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  /* Individual particle */
+  .particle {
+    position: absolute;
+    bottom: -10px;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation-name: floatUp;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Slower float animation */
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-100vh) scale(0.4);
+      opacity: 0;
+    }
+  }
+  
+
+
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .fade-up {
+    animation: fadeUp 1.5s ease-out forwards;
+    opacity: 0;
+  }
+  
+
+  /* For sun image (needs translateX(-50%) to stay centered) */
+@keyframes fadeUpCentered {
+    0% {
+      transform: translateY(160px) translateX(-50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) translateX(-50%);
+      opacity: 1;
+    }
+  }
+  
+  .fade-up-centered {
+    animation: fadeUpCentered 1.8s ease-out forwards;
+    opacity: 0;
+  }
+
+
+
